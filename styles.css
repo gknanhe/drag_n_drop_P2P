@@ -1,0 +1,202 @@
+/* Write your desired css here */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(60deg, rgb(72, 72, 255), rgb(44, 171, 255));
+  /* background: url(./carousel1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+}
+
+.carousel-item {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: transform 0.1s ease; */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.carousel-item .visible {
+  display: block;
+}
+
+/* @keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+/* Animation for sliding images */
+/* @keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+/* Individual carousel items */
+/* .carousel-item {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+} */
+
+/* Active carousel item */
+/* .carousel-item.active {
+  opacity: 1;
+}
+*/
+
+.app-container {
+  width: 600px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.519);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  box-shadow: rgba(129, 129, 129, 0.218) 0px 8px 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.drop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+#title-text {
+  color: #ff5722;
+}
+
+#dropzone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 150px;
+  border: 1px dashed #f44336;
+  border-radius: 10px;
+}
+
+#dropzone p {
+  font-size: 20px;
+  color: #474747;
+  font-weight: 500;
+}
+
+#dropzone p span {
+  color: #ff5722;
+  text-decoration: underline;
+}
+
+#dropzone.drag-over {
+  border-color: #4fb1f8;
+  background: rgba(0, 0, 0, 0.512);
+}
+
+#fileList {
+  width: 80%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 20px;
+  /* padding: 10px 50px; */
+}
+
+.file-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  background: rgba(255, 255, 169, 0.577);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.file-container img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+textarea {
+  width: auto;
+  flex: 1;
+  min-height: 50px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  outline: none;
+  border: 1px solid rgb(157, 255, 255);
+  background: rgba(255, 255, 255, 0.881);
+}
+
+.add-file,
+.remove-file {
+  padding: 10px 10px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  background: rgb(0, 161, 48);
+  color: aliceblue;
+}
+
+.remove-file svg {
+  background: red;
+}
